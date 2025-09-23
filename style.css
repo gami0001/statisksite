@@ -94,6 +94,16 @@ img {
   font-style: normal;
 }
 
+.product_img {
+  width: 70%;
+  margin: 2rem auto;
+}
+
+.grid-1_1_1 {
+  margin: 2rem 5rem 0rem 0rem;
+  font-family: "Share Tech", sans-serif;
+}
+
 @media screen and (max-width: 800px) {
   .mainindex {
     margin-left: 50px;
