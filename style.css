@@ -8,16 +8,76 @@ img {
   width: 100%;
 }
 
-section {
+.logohead {
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+}
+
+.mainindex {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.category_list_container {
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
-article {
+.articlebutton {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 1;
+  gap: 10px;
+}
+
+.button {
+  font-family: "Share Tech", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #93172a;
+  color: white;
+  padding: 10px 10px 20px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button:hover {
+  scale: 1.05;
+}
+
+.product_list_container {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: auto;
+}
+
+.product_card {
   display: grid;
   grid-template-rows: subgrid;
   grid-row: span 3;
-  gap: 10px;
+}
+
+.share-tech-regular {
+  font-family: "Share Tech", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media screen and (max-width: 800px) {
+  .mainindex {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .logohead {
+    width: 60%;
+  }
 }
