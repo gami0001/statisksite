@@ -63,9 +63,32 @@ img {
   display: grid;
   grid-template-rows: subgrid;
   grid-row: span 3;
+  gap: 20px;
+}
+
+.productbtn {
+  cursor: pointer;
 }
 
 .share-tech-regular {
+  font-family: "Share Tech", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sold_out {
+  opacity: 50%;
+  display: grid;
+  place-self: center center center;
+  grid-area: 1/1;
+}
+
+.sold_out h3 {
+  display: inline-block;
+  color: #ffffff;
+  position: absolute;
+  background-color: rgb(93, 86, 69);
+  padding: 10px 30px 10px 30px;
   font-family: "Share Tech", sans-serif;
   font-weight: 400;
   font-style: normal;
