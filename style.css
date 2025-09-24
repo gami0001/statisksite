@@ -83,6 +83,7 @@ img {
   padding: 16px;
   margin: 16px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .product_card:hover {
@@ -117,6 +118,15 @@ img {
   font-style: normal;
 }
 
+.hot {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background-color: #93172a;
+  color: #fff;
+  padding: 4px 8px;
+}
+
 .main_one_product {
   font-family: "Share Tech", sans-serif;
   font-weight: 400;
@@ -129,7 +139,7 @@ hr {
 
 .product_img {
   width: 100%;
-  max-width: 400px; /* valgfri, så billedet ikke bliver kæmpe på store skærme */
+  max-width: 400px;
   margin: 2rem auto;
 }
 
@@ -234,5 +244,13 @@ ul {
 
   .cta {
     align-items: center;
+  }
+
+  .sold_out h3 {
+    padding: 5px 10px 5px 10px;
+  }
+
+  .hot {
+    font-size: 0.8rem;
   }
 }
