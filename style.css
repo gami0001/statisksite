@@ -8,6 +8,9 @@ img {
   width: 100%;
 }
 
+.mainindex img {
+  width: 34.8%;
+}
 .logohead {
   width: 30%;
   display: block;
@@ -17,6 +20,15 @@ img {
 .mainindex {
   margin-left: 100px;
   margin-right: 100px;
+  font-family: "Share Tech", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mainindex h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .category_list_container {
@@ -34,9 +46,6 @@ img {
 }
 
 .button {
-  font-family: "Share Tech", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   background-color: #93172a;
   color: white;
   padding: 10px 10px 20px 10px;
@@ -52,6 +61,11 @@ img {
   scale: 1.05;
 }
 
+.mainlist {
+  font-family: "Share Tech", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 .product_list_container {
   padding: 20px;
   display: grid;
@@ -64,6 +78,15 @@ img {
   grid-template-rows: subgrid;
   grid-row: span 3;
   gap: 20px;
+  border: 1px solid #93172a;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  box-sizing: border-box;
+}
+
+.product_card:hover {
+  scale: 1.05;
 }
 
 .productbtn {
@@ -94,24 +117,40 @@ img {
   font-style: normal;
 }
 
+.main_one_product {
+  font-family: "Share Tech", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+hr {
+  margin-bottom: 25px;
+}
+
 .product_img {
-  display: block;
-  width: 50%;
+  width: 100%;
+  max-width: 400px; /* valgfri, så billedet ikke bliver kæmpe på store skærme */
   margin: 2rem auto;
 }
 
+.product_img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .product_info {
-  margin: 2rem 5rem 0rem 0rem;
-  font-family: "Share Tech", sans-serif;
+  margin: 2rem 6rem 0 0;
 }
 
 .size_picker {
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   gap: 20px;
 }
 
 .size_picker label {
-  margin-bottom: 4px;
   cursor: pointer;
 }
 
@@ -145,13 +184,18 @@ ul {
   margin-bottom: 20px;
 }
 
-.size_picker {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
 .cta_btn:hover {
   scale: 1.05;
+}
+
+.back_btn {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.back_btn:hover {
+  text-decoration: underline;
 }
 @media screen and (max-width: 800px) {
   .mainindex {
@@ -161,5 +205,34 @@ ul {
 
   .logohead {
     width: 60%;
+  }
+
+  .product_container {
+    grid-template-columns: 1fr;
+  }
+
+  .product_img {
+    width: 100%;
+    margin: 0 auto 2rem auto;
+  }
+  .product_info {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 90%;
+  }
+
+  .product_info ul {
+    list-style-position: inside;
+    padding: 0;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  .size_picker {
+    justify-content: center;
+  }
+
+  .cta {
+    align-items: center;
   }
 }
