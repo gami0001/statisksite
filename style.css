@@ -95,15 +95,64 @@ img {
 }
 
 .product_img {
-  width: 70%;
+  display: block;
+  width: 50%;
   margin: 2rem auto;
 }
 
-.grid-1_1_1 {
+.product_info {
   margin: 2rem 5rem 0rem 0rem;
   font-family: "Share Tech", sans-serif;
 }
 
+.size_picker {
+  display: flex;
+  gap: 20px;
+}
+
+.size_picker label {
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.cta_btn {
+  background-color: #93172a;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  padding: 10px 70px 10px 70px;
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: auto;
+}
+
+.product_info p,
+ul {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.size_picker {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cta_btn:hover {
+  scale: 1.05;
+}
 @media screen and (max-width: 800px) {
   .mainindex {
     margin-left: 50px;
