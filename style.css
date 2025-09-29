@@ -69,8 +69,8 @@ img {
 .product_list_container {
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .product_card {
@@ -100,28 +100,10 @@ img {
   font-style: normal;
 }
 
-.sold_out {
-  opacity: 50%;
-  display: grid;
-  place-self: center center center;
-  grid-area: 1/1;
-}
-
-.sold_out h3 {
-  display: inline-block;
-  color: #ffffff;
-  position: absolute;
-  background-color: rgb(93, 86, 69);
-  padding: 10px 30px 10px 30px;
-  font-family: "Share Tech", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .hot {
   position: absolute;
-  bottom: 16px;
-  right: 16px;
+  bottom: 20px;
+  right: 10px;
   background-color: #93172a;
   color: #fff;
   padding: 4px 8px;
@@ -207,6 +189,19 @@ ul {
 .back_btn:hover {
   text-decoration: underline;
 }
+
+.sold_out {
+  position: absolute;
+  bottom: 170px;
+  right: 10px;
+  background: white;
+  padding: 10px;
+  margin-left: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
 @media screen and (max-width: 800px) {
   .mainindex {
     margin-left: 50px;
@@ -244,10 +239,6 @@ ul {
 
   .cta {
     align-items: center;
-  }
-
-  .sold_out h3 {
-    padding: 5px 10px 5px 10px;
   }
 
   .hot {
