@@ -1,5 +1,10 @@
 console.log("loaded");
 
+const category = new URLSearchParams(window.location.search).get("category");
+const url = `https://kea-alt-del.dk/t7/api/products?category=${category}`;
+
+getData(url);
+
 getData("https://kea-alt-del.dk/t7/api/products/");
 const productContainer = document.querySelector(".product_list_container");
 function getData(url) {
