@@ -61,23 +61,22 @@ img {
   scale: 1.05;
 }
 
-.mainlist {
-  font-family: "Share Tech", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
 #product_list_container {
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+  font-family: "Share Tech", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .product_card {
   display: grid;
   grid-template-rows: subgrid;
-  grid-row: span 3;
-  gap: 20px;
+  grid-row: span 6;
+  border-radius: 1rem;
+  padding: 1rem;
   border: 1px solid #93172a;
   border-radius: 8px;
   padding: 16px;
@@ -98,15 +97,6 @@ img {
   font-family: "Share Tech", sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-
-.hot {
-  position: absolute;
-  bottom: 20px;
-  right: 10px;
-  background-color: #93172a;
-  color: #fff;
-  padding: 4px 8px;
 }
 
 #productcontainer {
@@ -190,22 +180,51 @@ ul {
   text-decoration: none;
   color: black;
   cursor: pointer;
+  font-family: "Share Tech", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .back_btn:hover {
   text-decoration: underline;
 }
 
-.sold_out {
-  position: absolute;
-  bottom: 170px;
-  right: 10px;
-  background: white;
+.imageContainer p {
+  display: none;
+}
+.soldOut .imageContainer p {
+  display: inline-block;
+  background-color: white;
+  font-size: 200%;
+  border: 2px solid rgb(0, 0, 0);
+  padding: 3px;
+}
+.imageContainer {
+  display: grid;
+  > * {
+    place-self: center center;
+    grid-area: 1 / 1;
+  }
+}
+
+.discounted_container {
+  display: none;
+}
+
+.discount .discounted_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.discount .price {
+  text-decoration: line-through;
+}
+
+.discounted_container p:nth-child(2) {
+  background-color: #93172a;
+  color: white;
   padding: 10px;
-  margin-left: 5px;
-  font-size: 15px;
-  cursor: pointer;
-  border: 1px solid black;
+  font-size: 80%;
 }
 
 @media screen and (max-width: 800px) {
@@ -222,7 +241,7 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  .billede {
+  .product_img {
     width: 100%;
     margin: 0 auto 2rem auto;
   }
@@ -245,9 +264,5 @@ ul {
 
   .cta {
     align-items: center;
-  }
-
-  .hot {
-    font-size: 0.8rem;
   }
 }

@@ -22,24 +22,23 @@ function showProducts(products) {
     }
 
     productContainer.innerHTML += ` 
-    <article class="product_card">
+    <article class="product_card ${product.soldout ? "soldOut" : ""} ${product.discount ? "discount" : ""}">
+    <div class="imageContainer">
                 <a class="productbtn" href="product.html?id=${product.id}"><img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="${product.productdisplayname}"></a>
+                <p>Out of stock</p>
+                </div>
                 <h2>${product.productdisplayname}</h2>
-                <p>${product.price}</p>
-           
-
-  ${
-    product.soldout === 1
-      ? `
-    <div class="sold_out">
-      <p>Out of stock</p>
-    </div>
-
-  `
-      : ""
-  }
-
-<p class="hot">Selling fast!</p>
-`;
+           <p class="price">
+        DKK <span>${product.price}</span>,-
+      </p>
+      <div class="discounted_container">
+        <p>
+            Now DKK <span>${Math.round(product.price - (product.price * product.discount) / 100)}</span>,-
+        </p>
+        <p>
+          <span>${product.discount}</span> %
+        </p>
+      </div>
+    </article>`;
   });
 }
