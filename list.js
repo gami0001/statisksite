@@ -2,17 +2,44 @@ console.log("loaded");
 
 const category = new URLSearchParams(window.location.search).get("category");
 const url = `https://kea-alt-del.dk/t7/api/products?category=${category}`;
+let allData;
+
+document.querySelectorAll(".filterbuttons button").forEach((btn) => {
+  btn.addEventListener("click", filterKlik);
+});
+
+function filterKlik(evt) {
+  showFiltered(evt.currentTarget.dataset.gender);
+}
+
+function showFiltered(filter) {
+  if (filter == "All") {
+    showProducts(allData);
+  } else {
+    const filteredProductArr = allData.filter((product) => product.gender === filter);
+    showProducts(filteredProductArr);
+  }
+  console.log("showFiltered", filter);
+  console.log(allData.filter((product) => product.gender === filter));
+}
 
 getData(url);
 
-getData("https://kea-alt-del.dk/t7/api/products/");
+// getData("https://kea-alt-del.dk/t7/api/products/");
 const productContainer = document.querySelector("#product_list_container");
 function getData(url) {
-  fetch(url).then((res) => res.json().then((data) => showProducts(data)));
+  fetch(url).then((res) =>
+    res.json().then((data) => {
+      allData = data;
+      showProducts(allData);
+    })
+  );
 }
 
 function showProducts(products) {
   console.log("products", products);
+  productContainer.innerHTML = "";
+
   products.forEach((product) => {
     console.log("productdisplayname", product.productdisplayname);
 
