@@ -45,6 +45,19 @@ img {
   gap: 10px;
 }
 
+.filterbuttons {
+  display: flex;
+  justify-content: right;
+}
+
+.filterbuttons button {
+  margin-left: 40px;
+  padding: 10px 20px 10px 20px;
+}
+
+.filterbuttons button:last-child {
+  margin-right: 40px;
+}
 .button {
   background-color: #93172a;
   color: white;
